@@ -1,0 +1,25 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Site</title>
+
+        <link rel="stylesheet" href="{% static 'showcase/css/bootstrap.min.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+
+        <script src="{% static 'showcase/js/jquery-3.1.0.min.js' %}"></script>
+        <script src="{% static 'showcase/js/bootstrap.min.js' %}"></script>
+        {% block javascript %}{% endblock %}
+    </body>
+</html>
