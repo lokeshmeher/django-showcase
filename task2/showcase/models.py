@@ -6,10 +6,10 @@ from django.db import models
 
 @python_2_unicode_compatible
 class Tag(models.Model):
-	name = models.CharField(max_length=30)
+	name = models.CharField(max_length=30, unique=True)
 
 	def __str__(self):
-		return self.name
+		return '-'.join(self.name.lower().split())
 
 
 @python_2_unicode_compatible

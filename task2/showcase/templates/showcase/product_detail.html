@@ -4,14 +4,15 @@
 {% block content %}
 
 <h1>{{ product.title }}</h1>
-Rating: {{ product.rating }}<br>
-<p>
-    {{ product.description }}
-</p>
-<p>
-    {% for tag in product.tags.all %}
-        {{ tag }}
-    {% endfor %}
-</p>
+<div class="panel panel-default">
+    <div class="panel-body">
+        Rating: {{ product.rating }}, Tagged as:
+        {% for tag in product.tags.all %}
+            {{ tag }}
+        {% endfor %}<br>
+        <br>
+        <p>{{ product.description }}</p>
+    </div>
+</div>
 
 {% endblock %}

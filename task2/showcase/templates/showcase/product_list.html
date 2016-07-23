@@ -3,15 +3,30 @@
 
 {% block content %}
 
-<h1>All Product list</h1>
+<h1>Products list</h1>
+<form action="{% url 'showcase:home' %}" method="get">
+    <div class="row">
+        <div class="col-sm-4">
+            {{ form }}
+        </div>
+    </div>
+</form>
+<br>
 
 {% for product in product_list %}
-    <h3><a href="{% url 'showcase:details' pk=product.pk %}">{{ product.title }}</a></h3>
-    <p>{{ product.description }}</p><br>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h3><a href="{% url 'showcase:product_detail' pk=product.pk %}">{{ product.title }}</a></h3>
+        <p>{{ product.description }}</p>
+    </div>
+</div>
 {% endfor %}
 
 {% endblock %}
 
 
 {% block javascript %}
+<script type="text/javascript">
+
+</script>
 {% endblock %}
