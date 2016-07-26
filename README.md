@@ -1,2 +1,3 @@
-# winkl-task-2
-Repo for 2nd task
+Showcase products for various categories with the most popular products appearing first.
+Dropdown option for narrowing down selection based on tags.
+
